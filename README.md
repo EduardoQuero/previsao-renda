@@ -1,21 +1,49 @@
-<img src="https://raw.githubusercontent.com/EduardoQuero/Profissao-Cientista-de-Dados/main/Cientista%20de%20Dados/ebac-course-utils/media/logo/ebac_logo-data_science.png" alt="ebac-logo">
+# Previsão de Renda
 
----
+Aplicação de ciência de dados que estima a renda de clientes a partir de informações cadastrais. O projeto foi desenvolvido no curso Profissão: Cientista de Dados da EBAC e segue as etapas do CRISP-DM.
 
-# [**Profissão: Cientista de Dados**](https://github.com/EduardoQuero/Profissao-Cientista-de-Dados)
-### [**Projeto #02**](https://github.com/EduardoQuero/previsao-renda/blob/main/ebac-projeto02-previsao_eduardo-quero.ipynb) | [Previsão de Renda](https://eduardo-quero-ebac-projeto02-previsao-renda.streamlit.app/)
+## Funcionalidades
 
-**Por:** [Eduardo Quero](https://www.linkedin.com/in/eduardo-quero/)<br>
-<!-- **Data:** 08 de Novembro de 2023.<br> -->
+- análise exploratória dos dados;
+- relatório automatizado de perfil;
+- visualizações univariadas e bivariadas;
+- preparação das variáveis;
+- treinamento de árvore de regressão;
+- simulação interativa em Streamlit.
 
----
+## Executar localmente
 
-https://github.com/EduardoQuero/previsao-renda/assets/104538741/bbc840a1-f66f-4b2b-91b0-c1bf49a20139
+Requer Python 3.10 ou superior.
 
+```bash
+git clone https://github.com/EduardoQuero/previsao-renda.git
+cd previsao-renda
+python -m venv .venv
+```
 
+Ative o ambiente virtual e instale as dependências:
 
+```bash
+pip install -r requirements.txt
+pip install streamlit pandas numpy matplotlib seaborn
+streamlit run Projeto_02.py
+```
 
----
+A aplicação ficará disponível em `http://localhost:8501`.
 
-[![Jupyter](https://img.shields.io/badge/Jupyter-F37626.svg?&logo=Jupyter&logoColor=white)](hhttps://github.com/EduardoQuero/previsao-renda/blob/main/ebac-projeto02-previsao_eduardo-quero.ipynb)
-[![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?logo=Streamlit&logoColor=white)](https://eduardo-quero-ebac-projeto02-previsao-renda.streamlit.app/)
+## Estrutura
+
+```text
+Projeto_02.py                              aplicação Streamlit
+ebac-projeto02-previsao_eduardo-quero.ipynb análise completa
+input/                                     dados de entrada
+output/                                    artefatos gerados
+pages/                                     páginas adicionais
+requirements.txt                           dependências
+```
+
+## Metodologia
+
+O fluxo cobre entendimento do negócio, exploração, preparação, modelagem, avaliação e implantação. A árvore de regressão é usada como modelo principal para relacionar o perfil cadastral à renda observada.
+
+> Projeto educacional. As previsões não devem ser usadas isoladamente para decisões financeiras.
