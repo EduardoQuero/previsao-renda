@@ -1,15 +1,57 @@
 # Previsão de Renda
 
-Aplicação de ciência de dados que estima a renda de clientes a partir de informações cadastrais. O projeto foi desenvolvido no curso Profissão: Cientista de Dados da EBAC e segue as etapas do CRISP-DM.
+Aplicação de ciência de dados que estima a renda a partir de informações cadastrais. O projeto percorre todo o ciclo analítico: entendimento do problema, exploração, preparação, modelagem, avaliação e disponibilização em uma interface Streamlit.
+
+## Problema
+
+Informações cadastrais possuem padrões que podem ajudar a estimar faixas de renda. O projeto organiza esses dados, investiga as relações mais relevantes e treina um modelo de regressão para produzir estimativas reproduzíveis.
+
+## Valor para o negócio
+
+Uma solução desse tipo pode apoiar:
+
+- segmentação e análise de perfis;
+- estudos de potencial de consumo;
+- priorização de análises comerciais;
+- validação de hipóteses sobre comportamento cadastral;
+- disponibilização de modelos para usuários não técnicos.
+
+> As previsões deste projeto são educacionais e não devem ser utilizadas isoladamente em decisões financeiras ou de crédito.
+
+## Fluxo da solução
+
+```mermaid
+flowchart LR
+    A[Dados cadastrais] --> B[Limpeza e validação]
+    B --> C[Análise exploratória]
+    C --> D[Preparação das variáveis]
+    D --> E[Modelo de regressão]
+    E --> F[Aplicação Streamlit]
+```
 
 ## Funcionalidades
 
-- análise exploratória dos dados;
-- relatório automatizado de perfil;
-- visualizações univariadas e bivariadas;
-- preparação das variáveis;
+- análise exploratória univariada e bivariada;
+- relatório automatizado de perfil dos dados;
+- tratamento e preparação das variáveis;
 - treinamento de árvore de regressão;
+- visualizações para interpretação dos resultados;
 - simulação interativa em Streamlit.
+
+## Tecnologias
+
+Python, Pandas, NumPy, Matplotlib, Seaborn, scikit-learn, Jupyter e Streamlit.
+
+## Estrutura
+
+```text
+Projeto_02.py                               aplicação Streamlit
+ebac-projeto02-previsao_eduardo-quero.ipynb análise completa
+input/                                      dados de entrada
+output/                                     artefatos gerados
+pages/                                      páginas adicionais
+requirements.txt                            dependências
+```
 
 ## Executar localmente
 
@@ -21,7 +63,7 @@ cd previsao-renda
 python -m venv .venv
 ```
 
-Ative o ambiente virtual e instale as dependências:
+Ative o ambiente e execute:
 
 ```bash
 pip install -r requirements.txt
@@ -31,19 +73,10 @@ streamlit run Projeto_02.py
 
 A aplicação ficará disponível em `http://localhost:8501`.
 
-## Estrutura
+## Dados e confidencialidade
 
-```text
-Projeto_02.py                              aplicação Streamlit
-ebac-projeto02-previsao_eduardo-quero.ipynb análise completa
-input/                                     dados de entrada
-output/                                    artefatos gerados
-pages/                                     páginas adicionais
-requirements.txt                           dependências
-```
+Este é um projeto educacional com dados próprios para demonstração. Não contém informações de empregadores, clientes, credenciais ou regras internas.
 
-## Metodologia
+## Autor
 
-O fluxo cobre entendimento do negócio, exploração, preparação, modelagem, avaliação e implantação. A árvore de regressão é usada como modelo principal para relacionar o perfil cadastral à renda observada.
-
-> Projeto educacional. As previsões não devem ser usadas isoladamente para decisões financeiras.
+[Eduardo Quero](https://www.linkedin.com/in/eduardo-quero/)
